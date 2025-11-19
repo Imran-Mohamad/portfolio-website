@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imran Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#over">Over mij</a></li>
+                <li><a href="#projecten">Projecten</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welkom op mijn portfolio</h1>
+        <p>Ik ben Imran, webdeveloper en designer</p>
+    </section>
+
+    <section id="over">
+        <h2>Over mij</h2>
+        <p>Hier komt jouw korte introductie.</p>
+    </section>
+
+    <section id="projecten">
+        <h2>Projecten</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>GameHub – Wireframes</h3>
+                <p>Low-fidelity wireframes voor een console gaming platform, mobiel en desktop.</p>
+                <p><strong>Technieken:</strong> Wireframing, UX, responsive design</p>
+                <p><strong>Wat ik deed:</strong> Alle wireframes ontworpen, mobiel-first en desktop-versie, focus op navigatie en gebruiksvriendelijkheid.</p>
+                <p><strong>Waarom dit project:</strong> Laat mijn UX en wireframing skills zien.</p>
+                <a href="Gamehub-Desktop.png" target="_blank">Bekijk wireframes</a>
+            </div>
+
+            <div class="project-card">
+                <h3>RegioNieuws – Sitemap</h3>
+                <p>Overzichtelijke sitemap van een lokaal nieuwsplatform, inclusief gebruikersrollen en toegangsrechten.</p>
+                <p><strong>Technieken:</strong> Sitemap, UX, informatiearchitectuur</p>
+                <p><strong>Wat ik deed:</strong> Alle pagina’s en gebruikersrollen in kaart gebracht, overzichtelijk en logisch gestructureerd.</p>
+                <p><strong>Waarom dit project:</strong> Laat mijn vaardigheden in informatiearchitectuur en UX zien.</p>
+                <a href="SiteMap.png" target="_blank">Bekijk sitemap</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Hallo Hi – HTML-stramien</h3>
+                <p>HTML-structuur van de landingspagina van Hallo Hi, klaar voor CSS styling.</p>
+                <p><strong>Technieken:</strong> HTML5, semantische tags</p>
+                <p><strong>Wat ik deed:</strong> Volledige structuur opgezet volgens ontwerp, semantisch en logisch gestructureerd.</p>
+                <p><strong>Waarom dit project:</strong> Laat mijn HTML-vaardigheden en begrip van webstructuur zien.</p>
+                <a href="Hallo-Hi.png" target="_blank">Bekijk code & screenshot</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: 9028732@student.tcrmbo.nl</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Imran</p>
+    </footer>
+    <script>
+const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
